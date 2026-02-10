@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class ConnectionFactory {
 
-    private static final String URL = "jdbc:mysql://localhost:3306/sistema_estacionamento";
+    private static final String URL = "";
     private static final String USER = "root"; // seu usuário do MySQL
     private static final String PASS = ""; // sua senha do MySQL
 
