@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane fx:id="mainTabPane" tabClosingPolicy="UNAVAILABLE" prefWidth="800.0" prefHeight="600.0"
+         xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <tabs>
+        <Tab text="Entrada de Veículos">
+            <content>
+                <fx:include source="entrada_veiculo.fxml"/>
+            </content>
+        </Tab>
+        <Tab text="Veículos no Pátio">
+            <content>
+                <fx:include source="lista_veiculos.fxml"/>
+            </content>
+        </Tab>
+    </tabs>
+</TabPane>

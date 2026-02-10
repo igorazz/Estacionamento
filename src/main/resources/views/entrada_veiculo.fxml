@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+
+<VBox spacing="15.0" alignment="TOP_CENTER" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="br.com.estacionamento.controller.EntradaController">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Registrar Entrada de Veículo">
+        <font>
+            <Font name="System Bold" size="18.0" />
+        </font>
+    </Label>
+
+    <GridPane hgap="10" vgap="10">
+        <Label text="Placa:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <TextField fx:id="txtPlaca" promptText="ABC-1234" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+        <Label text="Modelo:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField fx:id="txtModelo" promptText="Ex: Honda Civic" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+        <Label text="Cor:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <TextField fx:id="txtCor" promptText="Ex: Preto" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+        <Label text="Tipo:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+        <ComboBox fx:id="cbTipo" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+    </GridPane>
+
+    <Button text="Registrar Entrada" onAction="#handleSalvar"
+            style="-fx-background-color: #2ecc71; -fx-text-fill: white; -fx-font-weight: bold;"/>
+
+    <Label fx:id="lblStatus" text="..." />
+</VBox>
