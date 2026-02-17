@@ -15,5 +15,8 @@
                 <fx:include source="lista_veiculos.fxml"/>
             </content>
         </Tab>
+        <Tab text="Faturamento">
+            <fx:include source="faturamento.fxml" />
+        </Tab>
     </tabs>
 </TabPane>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="br.com.estacionamento.controller.FaturamentoController" style="-fx-padding: 40;">
+
+    <Text text="💰 Faturamento Total" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+
+    <HBox alignment="CENTER" spacing="10">
+        <Label text="R$" style="-fx-font-size: 30px;" />
+        <Label fx:id="lblTotal" text="0,00" style="-fx-font-size: 40px; -fx-text-fill: green; -fx-font-weight: bold;" />
+    </HBox>
+
+    <Button text="Atualizar Saldo" onAction="#atualizarSaldo" style="-fx-padding: 10 20;" />
+
+</VBox>

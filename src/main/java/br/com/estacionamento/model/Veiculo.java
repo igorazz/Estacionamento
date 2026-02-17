@@ -1,5 +1,9 @@
 package br.com.estacionamento.model;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Optional; // Necessário para o botão do Alert
+
 public class Veiculo {
     private Integer id;
     private String placa;
@@ -7,6 +11,7 @@ public class Veiculo {
     private String cor;
     private String tipo;
     private Integer idMensalista;
+    private LocalDateTime dataEntrada;
 
     // Construtor Completo
     public Veiculo(Integer id, String placa, String modelo, String cor, String tipo, Integer idMensalista) {
@@ -40,4 +45,7 @@ public class Veiculo {
 
     public Integer getIdMensalista() { return idMensalista; }
     public void setIdMensalista(Integer idMensalista) { this.idMensalista = idMensalista; }
+
+    public LocalDateTime getDataEntrada() { return dataEntrada; }
+    public void setDataEntrada(LocalDateTime dataEntrada) { this.dataEntrada = dataEntrada; }
 }
