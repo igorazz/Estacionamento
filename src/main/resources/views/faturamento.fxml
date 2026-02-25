@@ -1,18 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.chart.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="br.com.estacionamento.controller.FaturamentoController" style="-fx-padding: 40;">
+<VBox alignment="TOP_CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="br.com.estacionamento.controller.FaturamentoController" style="-fx-background-color: #f4f4f4;">
 
-    <Text text="💰 Faturamento Total" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
 
-    <HBox alignment="CENTER" spacing="10">
-        <Label text="R$" style="-fx-font-size: 30px;" />
-        <Label fx:id="lblTotal" text="0,00" style="-fx-font-size: 40px; -fx-text-fill: green; -fx-font-weight: bold;" />
+    <Label text="Painel de Controle Financeiro" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #333;" />
+
+    <HBox spacing="30" alignment="CENTER" VBox.vgrow="ALWAYS">
+        <VBox alignment="CENTER" style="-fx-background-color: white; -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5);">
+            <PieChart fx:id="chartFaturamento" title="Ganhos por Veículo" prefWidth="400" />
+        </VBox>
+
+        <VBox alignment="CENTER" style="-fx-background-color: white; -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5);">
+            <PieChart fx:id="chartFormas" title="Meios de Pagamento" prefWidth="400" />
+        </VBox>
     </HBox>
 
-    <Button text="Atualizar Saldo" onAction="#atualizarSaldo" style="-fx-padding: 10 20;" />
-
+    <HBox alignment="CENTER" spacing="15" style="-fx-background-color: #fff; -fx-padding: 15; -fx-background-radius: 10;">
+        <Label text="FATURAMENTO TOTAL:" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+        <Label fx:id="lblTotalGeral" text="R$ 0,00" style="-fx-font-size: 22px; -fx-text-fill: #2e7d32; -fx-font-weight: bold;" />
+        <Button text="🔄 Atualizar Dashboard" onAction="#atualizarGrafico"
+                style="-fx-background-color: #1976d2; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand;" />
+    </HBox>
 </VBox>

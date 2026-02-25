@@ -3,15 +3,23 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
 
-<VBox spacing="10.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="br.com.estacionamento.controller.ListaController">
+<VBox spacing="10.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="br.com.estacionamento.controller.ListaController" style="-fx-background-color: #f9f9f9;">
+
     <padding>
         <Insets top="20" right="20" bottom="20" left="20"/>
     </padding>
 
-    <Label text="Veículos no Pátio" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+    <Label text="Gestão de Pátio" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
 
-    <TableView fx:id="tblVeiculos" VBox.vgrow="ALWAYS">
+    <HBox spacing="10" alignment="CENTER_LEFT" style="-fx-background-color: #ecf0f1; -fx-padding: 10; -fx-background-radius: 5;">
+        <TextField fx:id="txtBuscaPlaca" promptText="Digite a placa para histórico..." prefWidth="250"
+                   style="-fx-background-radius: 15;"/>
+        <Button text="🔍 Buscar Histórico" onAction="#handleBuscarPlaca"
+                style="-fx-background-color: #34495e; -fx-text-fill: white; -fx-background-radius: 15; -fx-cursor: hand;"/>
+    </HBox>
+
+    <TableView fx:id="tblVeiculos" VBox.vgrow="ALWAYS" style="-fx-background-radius: 5;">
         <columns>
             <TableColumn fx:id="colPlaca" text="Placa" prefWidth="100"/>
             <TableColumn fx:id="colModelo" text="Modelo" prefWidth="150"/>
@@ -21,7 +29,9 @@
     </TableView>
 
     <HBox spacing="10" alignment="CENTER_RIGHT">
-        <Button text="Atualizar" onAction="#atualizarTabela"/>
-        <Button text="Dar Saída" onAction="#handleSaida" style="-fx-background-color: #e74c3c; -fx-text-fill: white;"/>
+        <Button text="🔄 Atualizar" onAction="#atualizarTabela"
+                style="-fx-background-radius: 5; -fx-cursor: hand;"/>
+        <Button text="🚪 Dar Saída" onAction="#handleSaida"
+                style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5; -fx-cursor: hand;"/>
     </HBox>
 </VBox>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="20.0" alignment="TOP_CENTER" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="br.com.estacionamento.controller.ConfiguracoesController">
+    <padding>
+        <Insets top="50" right="50" bottom="50" left="50"/>
+    </padding>
+
+    <Label text="Configurações do Sistema" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+
+    <VBox spacing="10" maxWidth="300">
+        <Label text="Valor da Hora (R$):" style="-fx-font-size: 14px;"/>
+        <TextField fx:id="txtValorHora" style="-fx-font-size: 16px;"/>
+        <Button text="Salvar Alterações" onAction="#handleSalvarPreco" maxWidth="Infinity"
+                style="-fx-background-color: #2980b9; -fx-text-fill: white; -fx-font-weight: bold;"/>
+    </VBox>
+
+    <Label text="As alterações afetarão todos os novos cálculos de saída."
+           style="-fx-font-style: italic; -fx-text-fill: gray;"/>
+</VBox>
